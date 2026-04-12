@@ -186,8 +186,8 @@ ANN performs well for simple image classification (~98%)
 However, it fails to capture spatial relationships
 CNN is better suited for image-based tasks
 
-👨‍💻 Author
+### 👨‍💻 Author
 Aryan Singh B.Tech CSE (AI/ML & Analytics)
 
-⭐ If you found this useful
+### ⭐ If you found this useful
 Give it a star ⭐ and share feedback!
