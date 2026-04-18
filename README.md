@@ -8,12 +8,11 @@ This project demonstrates a **complete Deep Learning pipeline** including data p
 
 ## 🚀 Features
 
-- Classifies handwritten digits using ANN
-- End-to-end ML pipeline implementation
-- Model evaluation using classification metrics
-- Confusion matrix visualization
-- Error analysis on misclassified images
-- Accuracy and loss visualization
+* Classifies handwritten digits using ANN
+* End-to-end ML pipeline implementation
+* Model evaluation using accuracy
+* Visualization of training performance
+* Error analysis on misclassified images
 
 ---
 
@@ -21,22 +20,23 @@ This project demonstrates a **complete Deep Learning pipeline** including data p
 
 The dataset used is **MNIST (Modified National Institute of Standards and Technology)**.
 
-- Total samples: 70,000
-- Image size: 28 × 28 (grayscale)
-- Classes: 10 (digits 0–9)
+* Total samples: 70,000
+* Image size: 28 × 28 (grayscale)
+* Classes: 10 (digits 0–9)
 
 ---
 
 ## 📊 Output Visualizations
 
 ### Accuracy & Loss
+
 ![](outputs/accuracy_plot.png)
 ![](outputs/loss_plot.png)
 
 ---
 
-
 ### Wrong Predictions
+
 ![](outputs/wrong_predictions.png)
 
 ---
@@ -46,7 +46,7 @@ The dataset used is **MNIST (Modified National Institute of Standards and Techno
 This project follows a complete workflow:
 
 1. Data Loading
-2. Data Preprocessing (Normalization, Flattening, Encoding)
+2. Data Preprocessing (Normalization)
 3. Model Building (ANN)
 4. Model Training
 5. Model Evaluation
@@ -61,58 +61,59 @@ This project follows a complete workflow:
 
 Architecture:
 
-- Input Layer: 784 neurons (flattened image)
-- Hidden Layers: Dense layers with ReLU activation
-- Output Layer: 10 neurons with Softmax
+* Input: 28 × 28 image (flattened inside the model)
+* Hidden Layers: Dense layers with ReLU activation
+* Output Layer: 10 neurons with Softmax
 
 ---
 
 ## 📊 Results
 
-- Accuracy: ~98%
-- Stable training with minimal overfitting
+* Accuracy: ~98%
+* Stable training with minimal overfitting
 
 ---
 
 ## ❌ Error Analysis
 
-- Misclassification occurs between visually similar digits:
-  - 3 ↔ 5  
-  - 4 ↔ 9  
-  - 8 ↔ 3 / 9  
+* Misclassification occurs between visually similar digits:
 
-- Reasons:
-  - Similar shapes
-  - Handwriting variations
-  - Loss of spatial information due to flattening
+  * 3 ↔ 5
+  * 4 ↔ 9
+  * 8 ↔ 3 / 9
+
+* Reasons:
+
+  * Similar shapes
+  * Handwriting variations
+  * Loss of spatial information due to flattening
 
 ---
 
 ## ⚠️ Limitations
 
-- ANN does not capture spatial relationships in images  
-- Performance saturates around ~98%  
-- Struggles with complex patterns  
+* ANN does not capture spatial relationships in images
+* Performance saturates around ~98%
+* Struggles with complex patterns
 
 ---
 
 ## 🚀 Future Improvements
 
-- Use CNN for better performance  
-- Hyperparameter tuning  
-- Add Dropout for regularization  
-- Deploy using FastAPI / Streamlit  
+* Use CNN for better performance
+* Hyperparameter tuning
+* Add regularization techniques
+* Deploy using FastAPI / Streamlit
 
 ---
 
 ## 🛠 Tech Stack
 
-- Python
-- TensorFlow / Keras
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
+* Python
+* TensorFlow / Keras
+* NumPy
+* Matplotlib
+* Scikit-learn
 
 ---
 
@@ -136,57 +137,46 @@ cd mnist-ann-project
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Train the model
+### 4️⃣ Run the project
 
-```bash
-python src/train.py
-```
+Open `mnist_ann.ipynb` and run all cells.
 
-### 5️⃣ Evaluate the model
+---
 
-```bash
-python src/evaluate.py
-```
-
-### 📂 Project Structure
+## 📂 Project Structure
 
 ```
 mnist-ann-project
 │
-├── data
-├── models
-│   └── mnist_ann_v1.h5
-│
-├── notebooks
-│   └── mnist_analysis.ipynb
-│
 ├── outputs
 │   ├── accuracy_plot.png
 │   ├── loss_plot.png
-│   ├── confusion_matrix.png
-│   └── wrong_predictions.png
+│   ├── wrong_predictions.png
 │
-├── src
-│   ├── model.py
-│   ├── preprocess.py
-│   ├── train.py
-│   └── evaluate.py
-│
+├── mnist_ann.ipynb
 ├── requirements.txt
 ├── README.md
 └── .gitignore
 ```
----  
 
-### 🧠 Key Learnings
-ANN performs well for simple image classification (~98%)
-However, it fails to capture spatial relationships
-CNN is better suited for image-based tasks
 ---
 
-### 👨‍💻 Author
-Aryan Singh B.Tech CSE (AI/ML & Analytics)
---- 
+## 🧠 Key Learnings
 
-### ⭐ If you found this useful
-Give it a star ⭐ and share feedback!
+* ANN performs well for simple image classification (~98%)
+* Data preprocessing (normalization) is crucial
+* Error analysis helps understand model limitations
+* CNN is better suited for image-based tasks
+
+---
+
+## 👨‍💻 Author
+
+Aryan Singh
+B.Tech CSE (AI/ML & Analytics)
+
+---
+
+## ⭐ If you found this useful
+
+Give it a star ⭐ and share your feedback!
