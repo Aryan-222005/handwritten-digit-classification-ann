@@ -35,10 +35,6 @@ The dataset used is **MNIST (Modified National Institute of Standards and Techno
 
 ---
 
-### Confusion Matrix
-![](outputs/confusion_matrix.png)
-
----
 
 ### Wrong Predictions
 ![](outputs/wrong_predictions.png)
